@@ -1,3 +1,5 @@
+import 'package:aesthetic/diffButtons/elevatedButton.dart';
+import 'package:aesthetic/diffButtons/iconButton.dart';
 import 'package:aesthetic/diffButtons/textButton.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +15,12 @@ class _DiffButtonsState extends State<DiffButtons> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Buttons Page")),
-      body: Container(
-        child: Column(
-          children: [TextButtonz()],
-        ),
+      body: Column(
+        children: [
+          const TextButtonz(),
+          const IconButtonz(),
+          const ElevatedButtonz()
+        ],
       ),
     );
   }

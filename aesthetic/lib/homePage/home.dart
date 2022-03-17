@@ -1,4 +1,5 @@
 import 'package:aesthetic/diffButtons/diffButtons.dart';
+import 'package:aesthetic/miscellaneous/miscPage.dart';
 import 'package:aesthetic/textFields/textFields.dart';
 import 'package:flutter/material.dart';
 
@@ -43,6 +44,18 @@ class _HomeState extends State<Home> {
                         builder: (context) => const DiffButtons()));
               },
               icon: const Icon(Icons.radio_button_on_outlined),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30), color: Colors.amber),
+            margin: const EdgeInsets.all(20),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const MiscPage()));
+              },
+              icon: const Icon(Icons.calendar_month),
             ),
           ),
         ],
