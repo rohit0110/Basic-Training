@@ -1,5 +1,8 @@
 import 'package:aesthetic/miscellaneous/checkBoxed.dart';
 import 'package:aesthetic/miscellaneous/datePicker.dart';
+import 'package:aesthetic/miscellaneous/radioButtonz.dart';
+import 'package:aesthetic/miscellaneous/sliderInput.dart';
+import 'package:aesthetic/miscellaneous/switched.dart';
 import 'package:flutter/material.dart';
 
 class MiscPage extends StatefulWidget {
@@ -15,7 +18,13 @@ class _MiscPageState extends State<MiscPage> {
     return Scaffold(
       appBar: AppBar(title: const Text("Miscellaneous Inputs")),
       body: SingleChildScrollView(
-        child: Column(children: [DatePickerz(), CheckeredBoxes()]),
+        child: Column(children: const [
+          DatePickerz(),
+          CheckeredBoxes(),
+          SliderInput(),
+          RadioButtonz(),
+          Switched()
+        ]),
       ),
     );
   }

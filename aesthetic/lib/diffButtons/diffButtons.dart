@@ -16,11 +16,7 @@ class _DiffButtonsState extends State<DiffButtons> {
     return Scaffold(
       appBar: AppBar(title: const Text("Buttons Page")),
       body: Column(
-        children: [
-          const TextButtonz(),
-          const IconButtonz(),
-          const ElevatedButtonz()
-        ],
+        children: const [TextButtonz(), IconButtonz(), ElevatedButtonz()],
       ),
     );
   }
