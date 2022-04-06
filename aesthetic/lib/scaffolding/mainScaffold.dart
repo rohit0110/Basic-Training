@@ -2,6 +2,7 @@ import 'package:aesthetic/scaffolding/scaffold1.dart';
 import 'package:aesthetic/scaffolding/scaffold2.dart';
 import 'package:aesthetic/scaffolding/scaffold3.dart';
 import 'package:aesthetic/scaffolding/scaffold4.dart';
+import 'package:aesthetic/scaffolding/scaffold5.dart';
 import 'package:flutter/material.dart';
 
 class MainScaffold extends StatefulWidget {
@@ -66,6 +67,14 @@ class _MainScaffoldState extends State<MainScaffold> {
               const SizedBox(
                 height: 20,
               ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const Scaffold5())));
+                  },
+                  child: const Text("Scaffold Example 5")),
             ],
           ),
         ));
