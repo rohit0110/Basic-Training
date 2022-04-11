@@ -3,6 +3,8 @@ import 'package:aesthetic/scaffolding/scaffold2.dart';
 import 'package:aesthetic/scaffolding/scaffold3.dart';
 import 'package:aesthetic/scaffolding/scaffold4.dart';
 import 'package:aesthetic/scaffolding/scaffold5.dart';
+import 'package:aesthetic/scaffolding/scaffold6.dart';
+import 'package:aesthetic/scaffolding/scaffold7.dart';
 import 'package:flutter/material.dart';
 
 class MainScaffold extends StatefulWidget {
@@ -75,6 +77,28 @@ class _MainScaffoldState extends State<MainScaffold> {
                             builder: ((context) => const Scaffold5())));
                   },
                   child: const Text("Scaffold Example 5")),
+              const SizedBox(
+                height: 20,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const scaffold6())));
+                  },
+                  child: const Text("Scaffold Example 6")),
+              const SizedBox(
+                height: 20,
+              ),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const scaffold7())));
+                  },
+                  child: const Text("Scaffold Example 7")),
             ],
           ),
         ));
