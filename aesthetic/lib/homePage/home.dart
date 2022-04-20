@@ -1,6 +1,7 @@
 import 'package:aesthetic/diffButtons/diffButtons.dart';
 import 'package:aesthetic/layouts/layouts.dart';
 import 'package:aesthetic/miscellaneous/miscPage.dart';
+import 'package:aesthetic/networking/dioPage.dart';
 import 'package:aesthetic/networking/httpPage.dart';
 import 'package:aesthetic/notifications/notifs.dart';
 import 'package:aesthetic/scaffolding/mainScaffold.dart';
@@ -108,7 +109,7 @@ class _HomeState extends State<Home> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HttpPage()));
+                            builder: (context) => const DioPage()));
                   },
                   icon: const Icon(Icons.wifi))),
         ],
