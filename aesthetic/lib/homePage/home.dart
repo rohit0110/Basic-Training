@@ -5,8 +5,11 @@ import 'package:aesthetic/networking/dioPage.dart';
 import 'package:aesthetic/networking/httpPage.dart';
 import 'package:aesthetic/notifications/notifs.dart';
 import 'package:aesthetic/scaffolding/mainScaffold.dart';
+import 'package:aesthetic/stateman/todo.dart';
+import 'package:aesthetic/stateman/todoModel.dart';
 import 'package:aesthetic/textFields/textFields.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -112,6 +115,21 @@ class _HomeState extends State<Home> {
                             builder: (context) => const DioPage()));
                   },
                   icon: const Icon(Icons.wifi))),
+          Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30), color: Colors.amber),
+              margin: const EdgeInsets.all(20),
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ChangeNotifierProvider(
+                                  create: (_) => TodoModel(),
+                                  child: const ToDo(),
+                                )));
+                  },
+                  icon: const Icon(Icons.list))),
         ],
       ),
     );
