@@ -1,3 +1,4 @@
+import 'package:aesthetic/animations/animationz.dart';
 import 'package:aesthetic/diffButtons/diffButtons.dart';
 import 'package:aesthetic/layouts/layouts.dart';
 import 'package:aesthetic/miscellaneous/miscPage.dart';
@@ -130,6 +131,18 @@ class _HomeState extends State<Home> {
                                 )));
                   },
                   icon: const Icon(Icons.list))),
+          Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30), color: Colors.amber),
+              margin: const EdgeInsets.all(20),
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Animationz()));
+                  },
+                  icon: const Icon(Icons.animation))),
         ],
       ),
     );
