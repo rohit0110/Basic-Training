@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:aesthetic/animations/carouselPage.dart';
+import 'package:aesthetic/animations/swipez.dart';
 import 'package:flutter/material.dart';
 
 class Animationz extends StatefulWidget {
@@ -87,7 +89,22 @@ class _AnimationzState extends State<Animationz>
                 width: 200,
                 child: const Text("With AnimateBuilder"),
               ),
-            )
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Swipez()));
+                },
+                child: const Text("Go to Swipe Page")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CarouselPage()));
+                },
+                child: const Text("Go to Carousel Package Page"))
           ],
         ),
       ),
